@@ -1,0 +1,35 @@
+public class Sequencial {
+  public static void main(String[] args) {
+    Sequencial seq = new Sequencial();
+    
+    int[] vetor = {35,15,29,83,10};
+    
+    seq.buscaSequencial(83, vetor);
+    seq.buscaSequencial(21, vetor);
+  }
+  
+  /**
+   * Método utilizado para procurar se um elemento está dentro do vetor.
+   * Este método utiliza o algoritmo de Pesquisa Sequencial para encontrar
+   * o elemento.
+   * 
+   * @param x    - Número que será procurado. 
+   * @param vetor - Vetor de números.
+   */
+  public void buscaSequencial(int x, int[] vetor) {
+    int i = 0;
+    
+    for(i = 0; i < vetor.length; i++) {
+      //Verifica se o elemento que está sendo procurado está no vetor.
+      if (vetor[i] == x) {
+        //Se encontrou o elemento, imprime ele na tela e para a pesquisa.
+        System.out.println("Encontrou o número " + x);
+        break;
+      }
+    }
+    
+    //Verifica se não encontrou o elemento no vetor.
+    if(i >= vetor.length)
+      System.out.println("Não encontrou o número " + x);
+  }
+}
